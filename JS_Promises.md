@@ -41,7 +41,7 @@ function myPromiseFunction() {
   return new Promise((resolve, reject) => {
     myAsyncFunction((err, result) => {
       if (!err) {
-        return resolve(result)
+        resolve(result)
       } else {
         reject(err)
       }
