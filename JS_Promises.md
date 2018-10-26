@@ -35,6 +35,20 @@ myPromiseFunction()
     handleError(err)
    })
 
+// These promise functions could be wrappers around async functions
+
+function myPromiseFunction() {
+  return new Promise((resolve, reject) => {
+    myAsyncFunction((err, result) => {
+      if (!err) {
+        return resolve(result)
+      } else {
+        reject(err)
+      }
+    }
+  }
+}
+
 ```
 
 
