@@ -4,9 +4,9 @@ JavaScript is a single-threaded, but handles many operations through asynchronou
 
 ```JavaScript
 // Take a set of 2 functions myAsyncFunction and myAsyncFunction2 that both execute callbacks when done.
-myAsyncFunction(function (err, result) => {
+myAsyncFunction((err, result) => {
   if (!err) {
-    myAsyncFunction2(function (err, result) => {
+    myAsyncFunction2((err, result) => {
       if (!err) {
         console.log('asynchronous processing done!')
       }
@@ -36,3 +36,5 @@ myPromiseFunction()
    })
 
 ```
+
+
